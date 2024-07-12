@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My page</title>
+  <script src="https://unpkg.com/htmx.org@2.0.0" integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body hx-boost="true">
+  <nav class="px-6 md:px-40 py-8 md:py-10 bg-gray-900 text-white flex flex-col md:flex-row justify-between text-lg md:text-xl">
+    <span class="text-center md:text-left">Welcome..!</span> 
+    <ul class="flex flex-col md:flex-row items-center">
+      <li class="mx-4 my-2 md:my-0 cursor-pointer hover:text-amber-600">
+        <button hx-get="/education" hx-push-url="true" hx-target="#mainContent" hx-swap="innerHTML">Education</button>
+      </li>
+      <li class="mx-4 my-2 md:my-0 cursor-pointer hover:text-amber-600">
+        <button hx-get="/experience" hx-push-url="true" hx-target="#mainContent" hx-swap="innerHTML">Experience</button>
+      </li>
+      <li class="mx-4 my-2 md:my-0 cursor-pointer hover:text-amber-600">
+        <button hx-get="/about" hx-push-url="true" hx-target="#mainContent" hx-swap="innerHTML">About</button>
+      </li>
+      <li class="mx-4 my-2 md:my-0 cursor-pointer hover:text-amber-600">
+        <button hx-get="/links" hx-push-url="true" hx-target="#mainContent" hx-swap="innerHTML">Links</button>
+      </li>
+      <li class="mx-4 my-2 md:my-0 cursor-pointer hover:text-amber-600">
+        <button hx-get="/contact" hx-push-url="true" hx-target="#mainContent" hx-swap="innerHTML">Contact</button>
+      </li>
+    </ul>
+  </nav>
+  <main id="mainContent" class="bg-gray-300 flex flex-col md:flex-row items-center p-6 md:p-10">
+    <div class="text-3xl md:text-4xl px-4 md:px-10 py-10 md:py-20 flex-1">
+      I am a Professional FrontEnd Developer <br>
+      Welcome to my website <br>
+      <div class="mt-4"> 
+        <button class="bg-slate-800 text-white mx-2 my-3 px-4 py-2 hover:bg-slate-500 rounded-2xl gap-2 text-base">Contact me</button>
+        <button class="bg-slate-800 text-white mx-2 my-3 px-4 py-2 hover:bg-slate-500 rounded-2xl gap-2 text-base">Download Resume</button>
+      </div>
+    </div>
+    <div class="flex items-center justify-center mt-10 md:mt-0">
+      <img src="profile.png" class="h-60 md:h-96" alt="profile">
+    </div>
+  </main>
+  <hr>
+</body>
+</html>
